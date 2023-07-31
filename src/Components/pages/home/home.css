@@ -1,0 +1,64 @@
+.poster{
+    opacity: 0.9;
+    transition: 200ms;
+    overflow: hidden;
+}
+.caro{
+  overflow: hidden;
+}
+.poster:hover{
+    opacity: 1;
+}
+.posterImage_overlay {
+  position: absolute;
+  z-index: 100;
+  width: 100%;
+  height: 70%;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: start;
+  padding: 50px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 9));
+
+}
+
+.posterImage {
+  height: 600px;
+}
+
+.posterImage_title {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+.container_description{
+    width: 60%;
+}
+.release_date{
+    text-align: start;
+    margin-bottom: 40px;
+    font-size: 14px;
+    color: yellow;
+}
+.description {
+  text-align: start;
+line-height: 1.5;
+letter-spacing: 1px;
+margin-bottom: 20px;
+}
+.poster_buttom button{
+padding: 16px 24px;
+color: black;
+background: yellow;
+border: none;
+border-radius: 5px;
+transition: 200ms;
+cursor:pointer 
+}
+.poster_buttom button:hover{
+    background: transparent;
+    color:yellow;
+    border: 1px solid yellow;
+}
