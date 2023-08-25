@@ -31,7 +31,7 @@ const Home = () => {
         transitionTime={500}
       >
         {movie.map((item, index) => (
-          <>
+          <div key={index}>
             <div className="posterImage">
               <img
                 src={`https://image.tmdb.org/t/p/original${item.backdrop_path}`}
@@ -43,7 +43,7 @@ const Home = () => {
               <div className="posterImage_title">{item.original_title}</div>
               <div className="container_description">
                 <div className="release_date">{item.release_date}</div>
-                <div className="description">{item.overview.slice(0, 250) + '...'}</div>
+                <div className="description">{item.overview.slice(0, 190) + '...'}</div>
               </div>
 
               <Link to={`/movie/${item.id}`} className="poster_buttom">
@@ -51,7 +51,7 @@ const Home = () => {
               </Link>
             </div>
 
-          </>
+          </div>
         ))}
       </Carousel>
 

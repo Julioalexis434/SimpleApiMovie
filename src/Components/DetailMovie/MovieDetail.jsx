@@ -42,22 +42,19 @@ const MovieDetail = () => {
         </div>
 
         <div className="overview">
-          {movieDetail ? movieDetail.overview : ""}
+          <p>{movieDetail ? movieDetail.overview.slice(0,100) : ""}</p>
+          <div className="Container_info">
+            <div className="container_genres">
+              {movieDetail
+                ? movieDetail.genres.map((item) => (
+                    <span className="nameGenres">{item.name}</span>
+                  ))
+                : ""}
+            </div>
+            <h3>{movieDetail ? movieDetail.release_date : ""}</h3>
+          </div>
         </div>
-
-       
       </div>
-      <div className="Container_info">
-        <div>
-
-        {movieDetail ? movieDetail.genres.map((item)=>(
-          <span className="nameGenres">{item.name}</span>
-        )) : ""}
-        </div>
-
-<h3>{movieDetail ? movieDetail.release_date : ''}</h3>
-      </div>
-      
     </>
   );
 };

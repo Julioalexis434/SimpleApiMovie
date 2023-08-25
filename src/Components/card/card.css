@@ -33,7 +33,8 @@
   justify-content: space-around;
   transition: 200ms;
   padding: 10px;
-  transform: translateY(100%)
+  transform: translateY(100%);
+  background:#0000008b;
 }
 .overlay_card:hover{
   transform: translateY(0)
